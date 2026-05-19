@@ -7,7 +7,7 @@ const urlRoutes = require("./routes/url.routes");
 const dataBase = require("./config/database");
 
 app.use(express.json());
-
+app.use(morgan('dev'))
 app.use(cors({
     origin: "srv-d86494ndl75s739e9fag",
     credentials: true
