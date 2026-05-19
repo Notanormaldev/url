@@ -9,7 +9,7 @@ function UrlShortener() {
   const shortenUrl = async () => {
 
     const response = await fetch(
-      "https://url-backend-0nr6.onrender.com",
+      "https://url-backend-0nr6.onrender.com/api/url",
       {
         method: "POST",
         headers: {
