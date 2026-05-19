@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0f172a,
+      #1e1b4b,
+      #581c87
+    );
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+.container::before {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  background: rgba(255,255,255,0.08);
+
+  border-radius: 50%;
+
+  top: -150px;
+  left: -100px;
+
+  filter: blur(100px);
+}
+
+.container::after {
+  content: "";
+
+  position: absolute;
+
+  width: 400px;
+  height: 400px;
+
+  background: rgba(168,85,247,0.3);
+
+  border-radius: 50%;
+
+  bottom: -120px;
+  right: -100px;
+
+  filter: blur(100px);
+}
+
+.card {
+  width: 430px;
+
+  padding: 40px;
+
+  border-radius: 24px;
+
+  background: rgba(255,255,255,0.1);
+
+  backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255,255,255,0.2);
+
+  box-shadow: 0px 10px 40px rgba(0,0,0,0.4);
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+
+  position: relative;
+
+  z-index: 10;
+}
+
+.heading {
+  color: white;
+
+  text-align: center;
+
+  font-size: 2.3rem;
+
+  font-weight: bold;
+}
+
+.subHeading {
+  color: rgba(255,255,255,0.7);
+
+  text-align: center;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+.input {
+  padding: 15px;
+
+  border: none;
+
+  outline: none;
+
+  border-radius: 14px;
+
+  background: rgba(255,255,255,0.15);
+
+  color: white;
+
+  font-size: 16px;
+}
+
+.input::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+.button {
+  padding: 15px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #8b5cf6,
+      #6366f1
+    );
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.button:hover {
+  transform: scale(1.03);
+
+  opacity: 0.9;
+}
+
+.result {
+  margin-top: 10px;
+
+  text-align: center;
+}
+
+.resultText {
+  color: white;
+
+  margin-bottom: 10px;
+
+  font-size: 14px;
+}
+
+.result a {
+  color: #c4b5fd;
+
+  text-decoration: none;
+
+  font-weight: bold;
+
+  word-break: break-all;
+}
