@@ -6,10 +6,13 @@ function UrlShortener() {
   const [url, setUrl] = useState("");
   const [shortUrl, setShortUrl] = useState("");
 
-  const shortenUrl = async () => {
 
-    const response = await fetch(
-      "https://url-backend-0nr6.onrender.com/api/url",
+  
+
+const shortenUrl = async () => {
+  try {
+      const response = await fetch(
+      "https://url-backend-0nr6.onrender.com/api/url/Shoorten",
       {
         method: "POST",
         headers: {
@@ -20,11 +23,22 @@ function UrlShortener() {
         })
       }
     );
-
+    if (!response.ok) throw new Error("Failed");
     const data = await response.json();
-
     setShortUrl(data.url);
-  };
+  } catch (err) {
+    alert("Something went wrong!");
+  }
+};
+  
+  // const shortenUrl = async () => {
+
+  
+
+  //   const data = await response.json();
+
+  //   setShortUrl(data.url);
+  // };
 
   return (
     <div className="container">
