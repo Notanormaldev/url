@@ -9,7 +9,7 @@ const dataBase = require("./config/database");
 app.use(express.json());
 
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: "srv-d86494ndl75s739e9fag",
     credentials: true
 }));
 
